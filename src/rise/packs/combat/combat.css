@@ -1,0 +1,28 @@
+/* Overhead health bar */
+
+.hp-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 33;
+  width: 54px;
+  height: 4px;
+  padding: 1px;
+  border: 1px solid var(--rise-border);
+  background: var(--rise-surface);
+  pointer-events: none;
+  will-change: transform;
+}
+.hp-bar.dead {
+  display: none;
+}
+.hp-bar.low {
+  border-color: var(--rise-destructive);
+}
+.hp-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--rise-destructive);
+  transition: width 0.12s linear;
+}

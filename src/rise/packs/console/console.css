@@ -1,0 +1,57 @@
+/* Dev console */
+
+.devcon {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  width: min(760px, 96vw);
+  max-height: 46vh;
+  padding: 8px 10px 10px;
+  border-top: 1px solid var(--rise-border);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 11px/1.5 var(--rise-font-mono);
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+.devcon.off {
+  display: none;
+}
+.devcon-log {
+  max-height: 34vh;
+  margin-bottom: 6px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+.devcon-line.echo {
+  color: var(--rise-muted-foreground);
+}
+.devcon-line.err {
+  color: var(--rise-destructive);
+}
+.devcon-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--rise-border);
+}
+.devcon-prompt {
+  color: var(--rise-accent);
+}
+.devcon-input {
+  flex: 1;
+  padding: 4px 2px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.devcon-hint {
+  font-size: 10px;
+  color: var(--rise-muted-foreground);
+}

@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-lib
+.zwork
+server/.wrangler
+server/node_modules
+shots/
+*.tgz
+e2e/shots
+test-results
+playwright-report
+.DS_Store
+Thumbs.db

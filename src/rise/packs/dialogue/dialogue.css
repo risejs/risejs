@@ -1,0 +1,63 @@
+/* Dialogue pack */
+
+.pkg-dlg {
+  position: absolute;
+  inset: 0;
+  z-index: 65;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8vh;
+  background: var(--rise-overlay);
+  pointer-events: auto;
+}
+.pkg-dlg.off {
+  display: none;
+}
+
+.pkg-dlg-box {
+  width: min(720px, calc(100vw - 40px));
+  padding: 16px 20px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font-family: var(--rise-font-sans);
+}
+.pkg-dlg-speaker {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rise-muted-foreground);
+}
+.pkg-dlg-text {
+  min-height: 48px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.pkg-dlg-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+}
+.pkg-dlg-choices button {
+  padding: 10px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: transparent;
+  color: inherit;
+  font: 13px/1.3 var(--rise-font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+.pkg-dlg-choices button:hover,
+.pkg-dlg-choices button:focus-visible {
+  border-color: var(--rise-accent);
+  outline: none;
+}
+.pkg-dlg-foot {
+  margin-top: 12px;
+  font-size: 10px;
+  color: var(--rise-muted-foreground);
+}

@@ -1,0 +1,114 @@
+/* Inventory and interaction prompt */
+
+.pkg-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  padding: 6px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 12px/1.2 var(--rise-font-sans);
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.pkg-prompt.off {
+  display: none;
+}
+
+.pkg-inv {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 296px;
+  padding: 14px 16px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 11px/1.4 var(--rise-font-sans);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.pkg-inv.off {
+  display: none;
+}
+.pkg-inv-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.pkg-inv-head span {
+  font-weight: 400;
+  color: var(--rise-muted-foreground);
+}
+.pkg-inv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.pkg-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  aspect-ratio: 1;
+  padding: 4px;
+  overflow: hidden;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+}
+.pkg-slot i {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  font-size: 8px;
+  font-style: normal;
+  color: var(--rise-muted-foreground);
+}
+.pkg-slot b {
+  font-weight: 500;
+  word-break: break-word;
+}
+.pkg-slot span {
+  color: var(--rise-muted-foreground);
+}
+.pkg-slot.empty b,
+.pkg-slot.empty span {
+  display: none;
+}
+.pkg-slot.sel {
+  border-color: var(--rise-accent);
+  background: var(--rise-muted);
+}
+.pkg-inv-tip {
+  min-height: 34px;
+  margin-top: 8px;
+  padding: 6px 8px;
+  border-radius: var(--rise-radius);
+  background: var(--rise-muted);
+  line-height: 1.5;
+}
+.pkg-inv-tip b {
+  display: block;
+  font-weight: 600;
+}
+.pkg-inv-tip span {
+  color: var(--rise-muted-foreground);
+}
+.pkg-inv-tip.off {
+  visibility: hidden;
+}
+.pkg-inv-foot {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--rise-muted-foreground);
+}

@@ -1,0 +1,173 @@
+/* Rise HUD: layout only. Colours, fonts and radius come from the --rise-* tokens. */
+
+@import './tokens.css';
+
+:where(#ui) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: var(--rise-foreground);
+  font: 12px/1.4 var(--rise-font-sans);
+}
+
+/* Crosshair. The --xh-* variables are set from config.hud.crosshair. */
+
+.xh {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--xh-size, 18px);
+  height: var(--xh-size, 18px);
+  transform: translate(-50%, -50%);
+  opacity: var(--xh-opacity, 0.75);
+  color: var(--xh-color, var(--rise-foreground));
+}
+.xh-arm {
+  position: absolute;
+  background: currentColor;
+}
+.xh-arm.t,
+.xh-arm.b {
+  left: 50%;
+  width: var(--xh-thick, 1px);
+  height: calc((var(--xh-size, 18px) - var(--xh-gap, 4px)) / 2);
+  transform: translateX(-50%);
+}
+.xh-arm.t {
+  top: 0;
+}
+.xh-arm.b {
+  bottom: 0;
+}
+.xh-arm.l,
+.xh-arm.r {
+  top: 50%;
+  width: calc((var(--xh-size, 18px) - var(--xh-gap, 4px)) / 2);
+  height: var(--xh-thick, 1px);
+  transform: translateY(-50%);
+}
+.xh-arm.l {
+  left: 0;
+}
+.xh-arm.r {
+  right: 0;
+}
+.xh-dot {
+  display: none;
+}
+.xh.style-dot .xh-arm,
+.xh.style-none .xh-arm,
+.xh.style-none .xh-dot {
+  display: none;
+}
+.xh.style-dot .xh-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: var(--xh-thick, 1px);
+  height: var(--xh-thick, 1px);
+  border-radius: 50%;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+/* Objective */
+
+.obj {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  max-width: min(52vw, 460px);
+}
+.obj-k,
+.obj-s {
+  font-size: 11px;
+  color: var(--rise-muted-foreground);
+}
+.obj-t {
+  margin: 2px 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* Badge */
+
+.badge {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  font-size: 11px;
+}
+.badge b {
+  font-weight: 600;
+}
+.badge span {
+  color: var(--rise-muted-foreground);
+}
+
+/* Hint and stats */
+
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  max-width: min(80vw, 720px);
+  padding: 6px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  font-size: 11px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+:where(#ui.playing) .hint {
+  opacity: 0.3;
+}
+
+.stats {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  color: var(--rise-muted-foreground);
+  font: 11px/1.4 var(--rise-font-mono);
+}
+.stats #rise-fps {
+  color: var(--rise-foreground);
+}
+
+/* Shared "hidden" state toggled from script. */
+.off {
+  display: none !important;
+}
+
+/* Pause */
+
+.pause {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--rise-overlay);
+}
+.pause-k {
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 600;
+  line-height: 1;
+}
+.pause-s {
+  font-size: 11px;
+  color: var(--rise-muted-foreground);
+}

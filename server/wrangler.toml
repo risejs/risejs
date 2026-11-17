@@ -1,0 +1,34 @@
+name = "rise-server"
+main = "src/index.js"
+compatibility_date = "2025-07-18"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 — save + telemetry
+[[d1_databases]]
+binding = "DB"
+database_name = "rise"
+database_id = "6f1a2c3d-4b5e-4f60-8a91-b2c3d4e5f607"
+
+# R2 — replay/blob
+[[r2_buckets]]
+binding = "BLOBS"
+bucket_name = "rise-blobs"
+
+# KV: fast session/cache store (replaces Redis for simple use cases)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "local-cache"
+
+# Durable Object: one room = one zone hub
+[[durable_objects.bindings]]
+name = "ROOM"
+class_name = "Room"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]
+
+[vars]
+ZONE_SIZE = "64"
+AUTH_SECRET = "dev-secret-change-me"
+AUTH_REQUIRED = "0"

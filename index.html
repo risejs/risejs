@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rise.js</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="description" content="Rise.js: a web game framework for 3D, 2.5D and 2D games, built on three.js with a small core." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rise" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <!-- System fonts: no CDN, works offline. To use a custom typeface, self-host the files, declare @font-face and override --rise-font-sans. -->
+    <link rel="stylesheet" href="/src/ui.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="view" tabindex="0"></canvas>
+      <div id="ui"></div>
+      <div id="boot">
+        <div class="boot-mark">RISE</div>
+        <div class="boot-sub" id="boot-msg">Raising the framework</div>
+        <div class="boot-bar"><i id="boot-fill"></i></div>
+      </div>
+    </div>
+    <script>
+      window.__errs = [];
+      window.addEventListener('error', (e) => { window.__errs.push(String(e.message || e.error)); });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

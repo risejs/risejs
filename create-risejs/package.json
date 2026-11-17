@@ -1,0 +1,38 @@
+{
+  "name": "create-risejs",
+  "version": "0.1.0-alpha.3",
+  "description": "Scaffold a Rise.js game project (three.js + Vite): npm create risejs@latest my-game",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "create-risejs": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://risejs.dev",
+  "keywords": [
+    "risejs",
+    "create-risejs",
+    "scaffold",
+    "threejs",
+    "game",
+    "webgl",
+    "vite"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risejs/risejs.git",
+    "directory": "create-risejs"
+  },
+  "bugs": {
+    "url": "https://github.com/risejs/risejs/issues"
+  }
+}

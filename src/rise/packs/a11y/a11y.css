@@ -1,0 +1,21 @@
+/* Accessibility helpers */
+
+/* Must beat every animation and transition, hence !important. */
+body.a11y-reduce-motion *,
+body.a11y-reduce-motion *::before,
+body.a11y-reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High contrast: pure black and white through the tokens. */
+body.a11y-contrast {
+  --rise-background: #000;
+  --rise-foreground: #fff;
+  --rise-muted-foreground: #fff;
+  --rise-border: #fff;
+  --rise-surface: #000;
+  --rise-overlay: rgb(0 0 0 / 0.85);
+}

@@ -1,0 +1,51 @@
+/* Chat pack */
+
+.chat {
+  position: absolute;
+  left: 24px;
+  bottom: 84px;
+  width: min(360px, 46vw);
+  font-family: var(--rise-font-sans);
+  pointer-events: none;
+}
+.chat.off {
+  display: none;
+}
+
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.chat-line {
+  width: fit-content;
+  max-width: 100%;
+  padding: 3px 8px;
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+}
+.chat-line.dm {
+  color: var(--rise-accent);
+}
+.chat-line.warn {
+  color: var(--rise-destructive);
+}
+
+.chat-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  outline: none;
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 12px/1 var(--rise-font-sans);
+  pointer-events: auto;
+}
+.chat-input:focus {
+  border-color: var(--rise-accent);
+}

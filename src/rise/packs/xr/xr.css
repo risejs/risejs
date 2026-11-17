@@ -1,0 +1,27 @@
+/* VR/AR entry button */
+
+.xr-btn {
+  position: absolute;
+  right: 24px;
+  bottom: 64px;
+  z-index: 45;
+  min-width: 64px;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 600 12px/1 var(--rise-font-sans);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.xr-btn:hover,
+.xr-btn:focus-visible {
+  border-color: var(--rise-accent);
+  outline: none;
+}
+.xr-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

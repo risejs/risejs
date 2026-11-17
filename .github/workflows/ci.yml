@@ -1,0 +1,48 @@
+# CI for the Rise.js repository.
+# The workflow lives in `.github/` at the repository root, so every step runs from the root
+# and no `working-directory` is needed.
+# `npm ci` requires package-lock.json to match package.json: run `npm install` and commit
+# the lock file whenever dependencies change.
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install
+        run: npm ci
+      - name: Unit tests + app lifecycle (headless)
+        run: npm test
+      - name: Build
+        run: npm run build
+      # Budgets are advisory: this step warns, and only fails on hard ceilings
+      # (core > 100 KB, pack > 24 KB) or boundary violations.
+      - name: Boundary + budget (advisory)
+        run: npm run budget
+      - name: API surface (no breaking export)
+        run: npm run api:check
+      # dist-lib is not committed, so build it before the package checks read it.
+      - name: Library build
+        run: npm run build:lib
+      - name: Package metadata + tarball
+        run: npm run check:package
+      - name: Install from tarball (clean dir)
+        run: npm run check:install
+      - name: Static audit (packs)
+        run: npm run audit
+      - name: Encoding check (UTF-8, no mojibake)
+        run: npm run check:encoding
+      - name: Map export (arena)
+        run: npm run make:map

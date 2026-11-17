@@ -1,0 +1,41 @@
+/* Lobby pack */
+
+.lobby {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  width: min(420px, 74vw);
+  padding: 14px 16px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 12px/1.6 var(--rise-font-sans);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.lobby.off {
+  display: none;
+}
+.lobby-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.lobby-head span {
+  font-weight: 400;
+  color: var(--rise-muted-foreground);
+}
+.lobby-list {
+  min-height: 40px;
+  padding: 8px;
+  border-radius: var(--rise-radius);
+  background: var(--rise-muted);
+  font-family: var(--rise-font-mono);
+}
+.lobby-foot {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--rise-muted-foreground);
+}

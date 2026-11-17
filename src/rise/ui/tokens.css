@@ -1,0 +1,22 @@
+/*
+ * Rise.js design tokens.
+ *
+ * Every colour, font and radius used by the HUD and the packs comes from these
+ * variables. Override them on :root (or any ancestor) to restyle the UI.
+ * :where() keeps the specificity at zero, so a plain `:root { ... }` wins.
+ */
+:where(:root) {
+  --rise-background: #09090b;
+  --rise-foreground: #fafafa;
+  --rise-muted: #27272a;
+  --rise-muted-foreground: #a1a1aa;
+  --rise-border: #3f3f46;
+  --rise-surface: rgb(9 9 11 / 0.82);
+  --rise-overlay: rgb(9 9 11 / 0.6);
+  --rise-accent: #60a5fa;
+  --rise-accent-foreground: #09090b;
+  --rise-destructive: #ef4444;
+  --rise-radius: 4px;
+  --rise-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --rise-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

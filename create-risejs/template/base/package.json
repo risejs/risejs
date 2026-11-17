@@ -1,0 +1,18 @@
+{
+  "name": "__NAME__",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "risejs-core": "0.1.0-alpha.3",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}

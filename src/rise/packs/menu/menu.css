@@ -1,0 +1,135 @@
+/* Menu and settings */
+
+.menu {
+  position: absolute;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rise-foreground);
+  font-family: var(--rise-font-sans);
+  pointer-events: auto;
+}
+.menu.off {
+  display: none;
+}
+
+.menu-scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--rise-overlay);
+}
+
+.menu-panel {
+  position: relative;
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 24px 24px 16px;
+  overflow: auto;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-background);
+}
+
+.menu-kicker,
+.menu-sub,
+.menu-foot {
+  font-size: 11px;
+  color: var(--rise-muted-foreground);
+}
+.menu-sub,
+.menu-actions,
+.menu-foot {
+  margin-top: 16px;
+}
+
+.menu-title {
+  margin: 4px 0 18px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.menu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-btn,
+.menu-key {
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.menu-btn {
+  min-height: 44px;
+  padding: 0 16px;
+  font: 500 14px/1 var(--rise-font-sans);
+}
+.menu-key {
+  min-width: 92px;
+  padding: 6px 10px;
+  font: 12px/1 var(--rise-font-mono);
+}
+.menu-btn:hover,
+.menu-btn.focused,
+.menu-btn:focus-visible,
+.menu-key:hover,
+.menu-key.focused,
+.menu-key:focus-visible {
+  border-color: var(--rise-accent);
+  outline: none;
+}
+.menu-btn:hover,
+.menu-btn.focused {
+  background: var(--rise-muted);
+}
+.menu-key.listening {
+  border-color: var(--rise-destructive);
+  color: var(--rise-destructive);
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rise-border);
+  font-size: 12px;
+}
+.menu-row label {
+  color: var(--rise-muted-foreground);
+}
+.menu-row input[type='range'] {
+  width: 140px;
+  accent-color: var(--rise-accent);
+}
+.menu-row select {
+  padding: 4px 8px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-background);
+  color: inherit;
+}
+.menu-val {
+  min-width: 52px;
+  font-family: var(--rise-font-mono);
+  text-align: right;
+}
+
+@media (max-width: 620px) {
+  .menu-panel {
+    padding: 20px 18px 14px;
+  }
+  .menu-row {
+    grid-template-columns: 1fr auto;
+  }
+  .menu-row input[type='range'] {
+    width: 100%;
+  }
+}

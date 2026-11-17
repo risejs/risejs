@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "frame": { "units": "m", "forward": "+X", "up": "+Y", "right": "+Z" },
+  "source": { "program": "scripts/make-crate-glb.mjs" },
+  "budget": { "triangles": { "LOD0": 100 }, "draws": 1 },
+  "colliders": [
+    {
+      "role": "collider.box",
+      "shape": { "kind": "box", "size": [1, 1, 1] },
+      "transform": { "translation": [0, 0.5, 0], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] }
+    }
+  ],
+  "anchors": [{ "name": "top", "role": "anchor", "transform": { "translation": [0, 1, 0] } }],
+  "ports": [],
+  "kit": { "footprint": [1, 1], "snapAxis": "Y" },
+  "lod": { "screenCoverage": [0.5] },
+  "palette": { "colors": ["#9e733d"], "deltaE": 8 },
+  "receipt": { "status": "pass", "warnings": [] }
+}

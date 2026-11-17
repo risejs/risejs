@@ -1,0 +1,43 @@
+/* Chat for the net pack */
+
+.net-chat {
+  position: absolute;
+  left: 28px;
+  bottom: 92px;
+  width: min(340px, 46vw);
+  font-family: var(--rise-font-sans);
+  pointer-events: none;
+}
+.net-chat.off {
+  display: none;
+}
+
+.net-chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.net-chat-line {
+  padding: 3px 8px;
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+}
+
+.net-chat-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  outline: none;
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 12px/1 var(--rise-font-sans);
+  pointer-events: auto;
+}
+.net-chat-input:focus {
+  border-color: var(--rise-accent);
+}

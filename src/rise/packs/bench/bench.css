@@ -1,0 +1,48 @@
+/* Bench overlay */
+
+.bench {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 60;
+  width: 280px;
+  padding: 10px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 11px/1.5 var(--rise-font-mono);
+  pointer-events: none;
+}
+.bench.off {
+  display: none;
+}
+.bench-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.bench-state {
+  font-weight: 400;
+  color: var(--rise-muted-foreground);
+}
+.bench-state[data-verdict='ok'] {
+  color: var(--rise-foreground);
+}
+.bench-state[data-verdict='warn'] {
+  color: var(--rise-accent);
+}
+.bench-state[data-verdict='bad'] {
+  color: var(--rise-destructive);
+}
+.bench-body {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+}
+.bench-foot {
+  margin-top: 6px;
+  font-size: 10px;
+  color: var(--rise-muted-foreground);
+}

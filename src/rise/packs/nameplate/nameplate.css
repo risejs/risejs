@@ -1,0 +1,55 @@
+/* Nameplates and speech bubbles */
+
+.nameplates {
+  position: absolute;
+  inset: 0;
+  z-index: 35;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.np {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+
+.np-name {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+  font: 11px/1.4 var(--rise-font-sans);
+  white-space: nowrap;
+}
+
+.np-bubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  max-width: 240px;
+  padding: 6px 10px;
+  border-radius: var(--rise-radius);
+  background: var(--rise-foreground);
+  color: var(--rise-background);
+  font: 12px/1.4 var(--rise-font-sans);
+  white-space: pre-wrap;
+  transform: translateX(-50%);
+}
+.np-bubble::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  border: 5px solid transparent;
+  border-top-color: var(--rise-foreground);
+  transform: translateX(-50%);
+}
+.np-bubble.off {
+  display: none;
+}

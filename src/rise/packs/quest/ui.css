@@ -1,0 +1,40 @@
+/* Quest tracker */
+
+.pkg-quests {
+  position: absolute;
+  left: 28px;
+  top: 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(320px, 42vw);
+  font: 11px/1.5 var(--rise-font-sans);
+  pointer-events: none;
+}
+.pkg-quests.off {
+  display: none;
+}
+
+.pkg-quest {
+  padding: 8px 12px;
+  border: 1px solid var(--rise-border);
+  border-radius: var(--rise-radius);
+  background: var(--rise-surface);
+  color: var(--rise-foreground);
+}
+.pkg-quest.done {
+  opacity: 0.5;
+}
+.pkg-quest-title {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.pkg-quest-step {
+  display: flex;
+  gap: 8px;
+  color: var(--rise-muted-foreground);
+}
+.pkg-quest-step i {
+  min-width: 28px;
+  font-style: normal;
+}

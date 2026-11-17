@@ -1,0 +1,69 @@
+/* Touch pack: virtual joystick and action buttons */
+
+.touch-ui {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.touch-stick {
+  position: absolute;
+  bottom: 28px;
+  width: 118px;
+  height: 118px;
+  border: 1px solid var(--rise-border);
+  border-radius: 50%;
+  background: var(--rise-overlay);
+  pointer-events: auto;
+  touch-action: none;
+}
+.touch-stick.left {
+  left: 24px;
+}
+.touch-stick.right {
+  right: 24px;
+}
+
+.touch-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border-radius: 50%;
+  background: var(--rise-foreground);
+  opacity: 0.5;
+  transition: transform 0.03s linear;
+}
+
+.touch-actions {
+  position: absolute;
+  right: 30px;
+  bottom: 168px;
+  display: flex;
+  gap: 10px;
+  pointer-events: auto;
+}
+.touch-btn {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--rise-border);
+  border-radius: 50%;
+  background: var(--rise-overlay);
+  color: var(--rise-foreground);
+  font: 600 16px/1 var(--rise-font-sans);
+  touch-action: none;
+}
+.touch-btn.on {
+  border-color: var(--rise-accent);
+  background: var(--rise-accent);
+  color: var(--rise-accent-foreground);
+}
+
+@media (min-width: 900px) {
+  .touch-ui {
+    display: none;
+  }
+}

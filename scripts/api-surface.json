@@ -1,0 +1,341 @@
+{
+  "apiVersion": 2,
+  "core": [
+    "API_VERSION",
+    "AudioBus",
+    "CameraRig",
+    "Character",
+    "DEFAULTS",
+    "Emitter",
+    "Entity",
+    "GameState",
+    "I18n",
+    "Input",
+    "IntegrityGuard",
+    "PALETTE",
+    "PRESETS",
+    "Player",
+    "Rng",
+    "SURFACE",
+    "SaveSlot",
+    "SpatialHash",
+    "SurfaceMap",
+    "VERSION",
+    "World",
+    "apiInfo",
+    "applyPresets",
+    "audioPlugin",
+    "batch",
+    "bindResize",
+    "box",
+    "computed",
+    "createApp",
+    "createHud",
+    "createLights",
+    "createRenderer",
+    "createSky",
+    "cylinder",
+    "decor",
+    "deepMerge",
+    "definePlugin",
+    "deprecate",
+    "effect",
+    "envInfo",
+    "filterByInterest",
+    "flush",
+    "hasWebGL2",
+    "hashSeed",
+    "inInterest",
+    "isSecureContext",
+    "isTouchDevice",
+    "material",
+    "mulberry32",
+    "neighborKeys",
+    "prefersReducedMotion",
+    "projectToScreen",
+    "reactive",
+    "resolveConfig",
+    "savePlugin",
+    "validateConfig",
+    "zoneCoords",
+    "zoneId",
+    "zoneKey"
+  ],
+  "packs": {
+    "a11y": [
+      "a11yPlugin"
+    ],
+    "assets": [
+      "ByteCache",
+      "assetsPlugin",
+      "classify",
+      "normalizeList",
+      "progressOf"
+    ],
+    "atlas": [
+      "composePages",
+      "packAtlas",
+      "validatePages"
+    ],
+    "audio3d": [
+      "audio3dPlugin"
+    ],
+    "bakes": [
+      "BakeQueue",
+      "bakesPlugin"
+    ],
+    "bench": [
+      "benchPlugin",
+      "buildReport",
+      "formatReport",
+      "summarizeFrames"
+    ],
+    "camera2d": [
+      "Camera2D"
+    ],
+    "chat": [
+      "chatPlugin"
+    ],
+    "combat": [
+      "Health",
+      "combatPlugin",
+      "hostile",
+      "inMeleeArc",
+      "pickTarget"
+    ],
+    "console": [
+      "consolePlugin"
+    ],
+    "contracts": [
+      "DIAGNOSTIC_CODE",
+      "diagnostic",
+      "fail",
+      "fnv1a",
+      "formatDiagnostic",
+      "hashValue",
+      "isOk",
+      "mergeDiagnostics",
+      "ok",
+      "sha256Hex",
+      "shortHash",
+      "stableStringify",
+      "unwrap"
+    ],
+    "debug": [
+      "debugPlugin"
+    ],
+    "dialogue": [
+      "createDialogue",
+      "dialoguePlugin"
+    ],
+    "editor": [
+      "editorPlugin"
+    ],
+    "editor2d": [
+      "editor2dPlugin"
+    ],
+    "fmv": [
+      "fmvPlugin"
+    ],
+    "gltf": [
+      "anchorsOf",
+      "applyManifestColliders",
+      "attachAnimations",
+      "budgetCheck",
+      "collidersFromGltf",
+      "collidersOf",
+      "findByRole",
+      "glbInfo",
+      "hasRole",
+      "isQuantized",
+      "ktx2Plan",
+      "loadAsset",
+      "loadGltf",
+      "lodIndexFor",
+      "mergeBoxes",
+      "needsKtx2",
+      "needsMeshopt",
+      "prefabFromGltf",
+      "preloadGltf",
+      "registerGltfPrefab",
+      "roleMatches",
+      "shapeBounds",
+      "validateManifest"
+    ],
+    "grid": [
+      "GridMover",
+      "gridPlugin"
+    ],
+    "inventory": [
+      "InteractionSystem",
+      "Inventory",
+      "inventoryPlugin"
+    ],
+    "lobby": [
+      "formatRooms",
+      "lobbyPlugin",
+      "pickRoom"
+    ],
+    "loot": [
+      "CRATE_LOOT",
+      "LootTable",
+      "lootPlugin"
+    ],
+    "menu": [
+      "ACTIONS",
+      "LABELS",
+      "createMenu"
+    ],
+    "music": [
+      "MOODS",
+      "chordFreqs",
+      "crossfade",
+      "duckGain",
+      "moodOf",
+      "musicPlugin"
+    ],
+    "nameplate": [
+      "nameplatePlugin",
+      "projectToScreen"
+    ],
+    "navmesh": [
+      "NavGrid"
+    ],
+    "net": [
+      "NetClient",
+      "netPlugin"
+    ],
+    "npc": [
+      "Npc",
+      "NpcAgent",
+      "npcPlugin"
+    ],
+    "persistence": [
+      "RemoteSave",
+      "persistencePlugin"
+    ],
+    "physics": [
+      "Body",
+      "GRAVITY",
+      "Heightfield",
+      "Obb",
+      "Vehicle",
+      "stepBody"
+    ],
+    "prefabs": [
+      "LodGroup",
+      "PrefabRegistry",
+      "buildInstanced",
+      "classifyTransform",
+      "composeAnchor",
+      "determinant3",
+      "flipIndices",
+      "groupInstances",
+      "lodGroupFromManifest",
+      "prefabsPlugin"
+    ],
+    "procgen": [
+      "autotileMask",
+      "generateRooms",
+      "makeNoise",
+      "makeRng",
+      "scatter"
+    ],
+    "quest": [
+      "QuestLog",
+      "questPlugin"
+    ],
+    "replay": [
+      "Playback",
+      "Recorder",
+      "replayPlugin"
+    ],
+    "sideview": [
+      "SideController",
+      "sidePlugin"
+    ],
+    "sprite2d": [
+      "SortedSprites",
+      "SpriteAnimator",
+      "SpriteBatch",
+      "atlasUV",
+      "clipTimeline",
+      "parallaxOffset",
+      "parseSheet",
+      "sprite2dPlugin",
+      "uvFor"
+    ],
+    "stats": [
+      "Progression",
+      "Stats",
+      "StatusEffects",
+      "statsPlugin",
+      "xpForLevel"
+    ],
+    "surface": [
+      "WEAR_FRAGMENT_BODY",
+      "WEAR_FRAGMENT_HEADER",
+      "WEAR_VERTEX_BODY",
+      "WEAR_VERTEX_HEADER",
+      "applySurfaceWear",
+      "attachSurfaceWear",
+      "edgeWeights"
+    ],
+    "telemetry": [
+      "telemetryPlugin"
+    ],
+    "terrain": [
+      "Terrain",
+      "chunkRanges",
+      "chunkStats",
+      "decodeHeightmap",
+      "encodeHeightmap",
+      "heightfieldFrom",
+      "lodIndexForDistance",
+      "terrainLod"
+    ],
+    "tilemap": [
+      "Tilemap",
+      "autotileMask",
+      "autotileVariant"
+    ],
+    "touch": [
+      "touchPlugin"
+    ],
+    "triggers": [
+      "Triggers"
+    ],
+    "tween": [
+      "EASING",
+      "Tweens",
+      "lerp",
+      "tweenPlugin"
+    ],
+    "vfx": [
+      "FloatText",
+      "HitFlash",
+      "Particles",
+      "Pool",
+      "burst",
+      "resetParticle",
+      "stepParticle",
+      "vfxPlugin"
+    ],
+    "vn": [
+      "EXPRESSIONS",
+      "Typewriter",
+      "normalizeNode",
+      "paginate",
+      "vnPlugin"
+    ],
+    "weather": [
+      "dayCycle",
+      "weatherPlugin"
+    ],
+    "xr": [
+      "xrPlugin"
+    ]
+  },
+  "package": "risejs-core",
+  "version": "0.1.0-alpha.1"
+}
